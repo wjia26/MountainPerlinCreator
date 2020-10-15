@@ -33,12 +33,19 @@ function resize(x,y){
 }
 
 function setup() {
+  greeting = createElement('p1', 'W');
+  greeting.position(230, 20);
+  greeting = createElement('p1', 'H');
+  greeting.position(300, 20);
+  link= createA('https://www.iamwilliamj.com/projects/', 'William Jiang');
+  link.style('font-style','italic');
+
   let inpX = createInput('800');
   let inpY = createInput('600');
   inpX.position(250, 19);
   inpY.position(320, 19);
-  inpX.size(40)
-  inpY.size(40)
+  inpX.size(45)
+  inpY.size(45)
   inpX.input(myInputEventX);
   inpY.input(myInputEventY);
   inpX.style('opacity',0.8);
@@ -75,10 +82,10 @@ function draw() {
   var c2 = color(c2_array)
   console.log()
   background(c2);
-  text('W:', 230, 33);
-  text('H:', 300, 33);
+
   
   setGradient(0, height/2, width, height, c2, c1, Y_AXIS);
+  // makeRainbow();
   colourMoon=color(c2_array.map(x => x +15)) //make brighter by unit of 10.
   drawMoon(colourMoon);
 
@@ -103,6 +110,37 @@ function draw() {
     yadj += height / (3.5 * numberOfMountains);
   };
 
+
+}
+
+function makeRainbow(){
+  push();
+  var X=50;
+
+  ellipseMode(CENTER);
+  noStroke()
+  //violet
+  fill(100,0,200,X)
+  ellipse(200,200,320,320)  
+  //indigo
+  fill(150,0,200,X)
+  ellipse(200,200,310,310)
+  //blue
+  fill(0,150,250,X)
+  ellipse(200,200,300,300)
+  //green
+  fill(20,250,20,X)
+  ellipse(200,200,290,290)  
+  //yellow
+  fill(250,250,0,X)
+  ellipse(200,200,280,280)
+  //orange
+  fill(250,150,40,X)
+  ellipse(200,200,270,270)
+  //red
+  fill(240,20,20,X)
+  ellipse(200,200,260,260)  
+  pop();
 
 }
 
