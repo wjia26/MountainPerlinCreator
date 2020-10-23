@@ -10,11 +10,19 @@ function isNumeric(num){
 
 function savefunction(c){
   saveCanvas(c, 'PerlinMountains', 'png');
+  gtag('event', 'saveImage', {
+    'event_category': 'buttonPress',
+    'event_label': 'buttonPress'
+  });
 }
 
 function refreshfunction(c){
   redraw();
   noiseSeed(random(0,10000));
+  gtag('event', 'refresh', {
+    'event_category': 'buttonPress',
+    'event_label': 'buttonPress'
+  });
 }
 
 function myInputEventX() {
@@ -29,6 +37,10 @@ function resize(x,y){
   if (isNumeric(x) && isNumeric(y)){
       resizeCanvas(x,y);
   } 
+  gtag('event', 'resizeCanvas', {
+    'event_category': 'buttonPress',
+    'event_label': 'buttonPress'
+  });
 
 }
 
