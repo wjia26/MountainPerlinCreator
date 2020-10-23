@@ -37,7 +37,9 @@ function setup() {
   greeting.position(230, 20);
   greeting = createElement('p1', 'H');
   greeting.position(300, 20);
-  link= createA('https://www.iamwilliamj.com/projects/', 'William Jiang');
+  link= createA('https://www.iamwilliamj.com/projects/2020-10-05-p5jsMountainGenerator.html', 'William Jiang ','_blank');
+  link.style('font-style','italic');
+  link= createA('https://github.com/wjia26/MountainPerlinCreator/blob/main/sketch.js', '| Code','_blank');
   link.style('font-style','italic');
 
   let inpX = createInput('800');
@@ -113,36 +115,37 @@ function draw() {
 
 }
 
-function makeRainbow(){
-  push();
-  var X=50;
+//Below function is not used atm - might try to implement at some point.
+// function makeRainbow(){
+//   push();
+//   var X=50;
 
-  ellipseMode(CENTER);
-  noStroke()
-  //violet
-  fill(100,0,200,X)
-  ellipse(200,200,320,320)  
-  //indigo
-  fill(150,0,200,X)
-  ellipse(200,200,310,310)
-  //blue
-  fill(0,150,250,X)
-  ellipse(200,200,300,300)
-  //green
-  fill(20,250,20,X)
-  ellipse(200,200,290,290)  
-  //yellow
-  fill(250,250,0,X)
-  ellipse(200,200,280,280)
-  //orange
-  fill(250,150,40,X)
-  ellipse(200,200,270,270)
-  //red
-  fill(240,20,20,X)
-  ellipse(200,200,260,260)  
-  pop();
+//   ellipseMode(CENTER);
+//   noStroke()
+//   //violet
+//   fill(100,0,200,X)
+//   ellipse(200,200,320,320)  
+//   //indigo
+//   fill(150,0,200,X)
+//   ellipse(200,200,310,310)
+//   //blue
+//   fill(0,150,250,X)
+//   ellipse(200,200,300,300)
+//   //green
+//   fill(20,250,20,X)
+//   ellipse(200,200,290,290)  
+//   //yellow
+//   fill(250,250,0,X)
+//   ellipse(200,200,280,280)
+//   //orange
+//   fill(250,150,40,X)
+//   ellipse(200,200,270,270)
+//   //red
+//   fill(240,20,20,X)
+//   ellipse(200,200,260,260)  
+//   pop();
 
-}
+// }
 
 function makeMountain(i, xoff, yadj, colour, numberOfMountains,increment) {
   console.log(yadj)
